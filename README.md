@@ -6,9 +6,9 @@ This CA is to identify existing vulnerabilities and implement security measures 
 ## Original Base Code
 https://github.com/webpwnized/mutillidae
 
-## Vulnerabilities to be fixed
-1. SQL Injection
-2. Stored XSS
-3. Reflected XSS
-4. Cross-Site Request Forgery 
-5. Broken Access Control 
+## Vulnerabilities chosen to fix
+1. CSRF + stored XSS
+2. Sensitive data exposure (robots.txt, database-config.inc, HTML/javascript comments)
+3. Security Misconfiguration (SSL stripping, SSL/TLS misconfigurations)
+4. Injection (Unrestriced file upload)
+
