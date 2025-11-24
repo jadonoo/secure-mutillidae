@@ -1,4 +1,10 @@
-## Original Base Code
+# Secured web Mutillidae II Application 
+This web app focuses on identifying and fixing security vulnerabilities in the Mutillidae II deliberately vulnerable web application.
+Application's primary purpose is to exercise the web security by intentionally making the website vulnerable. 
+It has Web UI layer and database layer.
+It has a list of vulnerabilities to be fixed.
+
+## Original vulnerable code repo
 https://github.com/webpwnized/mutillidae
 
 ## Vulnerabilities chosen to fix
@@ -6,12 +12,6 @@ https://github.com/webpwnized/mutillidae
 2. Sensitive data exposure (robots.txt, database-config.inc, HTML/javascript comments)
 3. Security Misconfiguration (SSL stripping, SSL/TLS misconfigurations)
 4. Injection (Unrestriced file upload)
-
-# Secured web Mutillidae II Application 
-This web app focuses on identifying and fixing security vulnerabilities in the Mutillidae II deliberately vulnerable web application.
-Application's primary purpose is to exercise the web security by intentionally making the website vulnerable. 
-It has Web UI layer and database layer.
-It has a list of vulnerabilities to be fixed.
 
 # Features and Security Objectives
 Major functionalities of application include user login, registration, reading blog and file upload to the website.
