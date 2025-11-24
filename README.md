@@ -57,6 +57,10 @@ Important files
 1. Navigate to login/register on website to login or register the new user.
 2. Toggle security to set the security level of website 0 = insecure, 5= secure (no vulnerabilities)
 3. Enforce TLS to enable HTTPS
+4. Application allows creating, deletion, and updating user accounts.
+5. It has database and web UI.
+6. It has admin level account and user level accounts in database with 500 accounts in total.
+
 
 # Security Improvements
 1. Implemented **HTML Output Encoding** in add-to-your-blog.php file to fix CSRF + Stored XSS vulnerability in OWASP 2013 >> CSRF >> Add to your blog
