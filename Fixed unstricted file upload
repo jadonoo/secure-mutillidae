@@ -1,0 +1,8 @@
+# Fixed unstricted file upload in http://localhost/mutillidae/index.php?page=upload-file.php page.
+Fix - applied this code.
+if (!in_array($lFileType, $lAllowedFileTypes)) { // if file type is not in allowed list
+	$lValidationMessage .= " File type {$lFileType} is NOT ALLOWED."; // show this message to user
+	$lFileValid = false; // reject file uploading if wrong file type
+
+Before fix, accept any files to be uploaded.
+After fix,  no longer accepted wrong file type uploading.
