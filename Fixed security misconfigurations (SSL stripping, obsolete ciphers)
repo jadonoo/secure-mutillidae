@@ -1,0 +1,17 @@
+# Fixed security misconfigurations (SSL stripping, obsolete ciphers)
+Fix - generate new server certificate and server key with 2048 key length and SHA2 algorithm.
+Before fix, this is shown.
+SSL Certificate:
+Signature algorithm : SHA1WithRSAEncryption
+RSA key length : 1024
+
+After fix, this is shown.
+SSL Certificate:
+Signature algorithm : SHA2WithRSAEncryption
+RSA key length : 2048
+
+
+# Fixed security misconfigurations (SSL stripping, obsolete ciphers)
+Fix - Removed weak ciphers
+Before fix, weak 64 bits key length still in use.
+After fix, no more weak 64 bit keys in cipher suite.
