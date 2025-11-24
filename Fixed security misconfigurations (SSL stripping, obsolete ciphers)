@@ -11,7 +11,17 @@ Signature algorithm : SHA2WithRSAEncryption
 RSA key length : 2048
 
 
-# Fixed security misconfigurations (SSL stripping, obsolete ciphers)
+# Fixed obsolete ciphers
 Fix - Removed weak ciphers
 Before fix, weak 64 bits key length still in use.
 After fix, no more weak 64 bit keys in cipher suite.
+
+
+# Fixed SSL stripping
+Fix - applied this code.
+	if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {  // check if the connection is on HTTPS
+	header('Strict-Transport-Security: max-age=31536000; includeSubDomains', true);  //then force all future connections to use HTTPS for 1 year including subdomains
+    }
+
+Before fix - max-age=0 was shown when inspect SSL strict policy with brower developer tool.
+After fix - max-age=31536000 was shown when inspect SSL strict policy with brower developer tool.
