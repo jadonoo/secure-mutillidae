@@ -14,8 +14,8 @@ It has Web UI layer and database layer.
 It has a list of vulnerabilities to be fixed.
 
 # Features and Security Objectives
-Major functionalities of application include user login, registration, reading blog and add entry to the website.
-Security objectives include preventing CSRF and stored XSS, protecting sensitive files form exposure, hardening obsolete SSL/TLS ciphers and algorithms, and preventing unauthorized injection.
+Major functionalities of application include user login, registration, reading blog and file upload to the website.
+Security objectives include preventing CSRF and stored XSS, protecting sensitive files form exposure, hardening obsolete SSL/TLS ciphers and algorithms, and preventing unauthorized injection file uploading.
 
 # Project structure
 /mutillidae 
