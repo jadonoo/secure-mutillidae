@@ -90,7 +90,7 @@ Important files
 # Key findings
 1. Obsolete SSL ciphers removed and no more obsolete signature algorithm and RSA key length
 2. When browsing to http://localhost/mutillidae/includes/database-config.inc, "The requested URL not found"** is shown to the user.
-3. After implementing **HTML Output Encoding**, When browsing http://localhost/mutillidae/index.php?page=add-to-your-blog.php, user input script is no longer executed as a code. It treated as a character.
+3. After implementing **HTML Output Encoding**, When browsing http://localhost/mutillidae/index.php?page=add-to-your-blog.php, user input script is no longer executed as a code. It treated as a character and simply add the input in the table.
 4. When browsing to localhost/mutillidae/robots.txt, it is no longer showing the sensitve data inside the text file.
 5. After restrcting the file upload, only allowed file type is accepted to upload. Hack.txt is no longer accepted.
 6. After enabling HSTS, max-age=31536000 is found in browser developer tools when user browse the website on HTTPS.
