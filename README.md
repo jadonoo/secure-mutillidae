@@ -49,7 +49,7 @@ Important files
 2. Install XAMPP
 3. Copy Mutillidae folder into XAMPP installation folder
 4. Start Apache and MySQL in XAMPP
-5. Create Mutillidae databse on phpmyadmin
+5. Create Mutillidae databse on phpmyadmin http://localhost/phpmyadmin/index.php
 6. Open http://localhost/mutillidae and restart the database to populate the table in Mutillidate database
 7. set security level 0 on mutillidae website to fix vulnerabilities
 
