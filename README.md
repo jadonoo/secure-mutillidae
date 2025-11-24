@@ -9,7 +9,9 @@ https://github.com/webpwnized/mutillidae
 
 # Secured web Mutillidae II Application 
 This web app focuses on identifying and fixing security vulnerabilities in the Mutillidae II deliberately vulnerable web application.
-Application's primary purpose is to teach the web security by intentionally making the website vulnerable. It lists a list of vulnerabilities to be fixed.
+Application's primary purpose is to exercise the web security by intentionally making the website vulnerable. 
+It has Web UI layer and database layer.
+It has a list of vulnerabilities to be fixed.
 
 # Features and Security Objectives
 Major functionalities of application include user login, registration, reading blog and add entry to the website.
