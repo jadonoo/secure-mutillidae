@@ -98,6 +98,48 @@ Important files
 
 # Contributions and References
 1. https://github.com/webpwnized/mutillidae
+2. Conklin K, Drake V, Strittmetter S, Braiterman Z, and Shostack A. (no date) Threat Modeling Process. Available at: https://owasp.org/www-community/Threat_Modeling_Process [Accessed 27 Nov 2025].
+3. (no date) Lab 92 – OWASP A6 Security Misconfiguration. Available at: 
+https://www.101labs.net/comptia-security/lab-92-owasp-a6-security-misconfiguration  [Accessed 20 Nov 2025].
+4. (no date) Lab 89 – OWASP A3 – Sensitive Information Disclosure. Available at: 
+https://www.101labs.net/comptia-security/lab-89-owasp-a3-sensitive-information-disclosure [Accessed 20 Nov 2025].
+5. (no date) A3:2017-Sensitive Data Exposure. Available at: 
+https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure [Accessed 20 Nov 2025].
+6. Bhattacharya J. (2025) Mutillidae Uncovered: Exploiting XSS for Beginners (Metasploitable 2 Lab). Available at: https://medium.com/@dave-patten/secure-software-development-lifecycle-ssdlc-8ad9273b395b [Accessed 27 Nov 2025].
+7.Patten D. (2024) Secure Software Development Lifecycle (SSDLC). Available at: 
+https://medium.com/@unKnOwn37/mutillidae-uncovered-exploiting-xss-for-beginners-metasploitable-2-lab-a5cb66890b89 [Accessed 27 Nov 2025].
+8. Jacob A. (2023) Examples of STRIDE threats for payment applications. Available at: 
+https://medium.com/@arielhacking/examples-of-stride-threats-for-payment-applications-87a0ad0c3a21 [Accessed 27 Nov 2025].
+9. (no date) CWE-219: Storage of File with Sensitive Data Under Web Root. Available at: 
+https://cwe.mitre.org/data/definitions/219.html [Accessed 20 Nov 2025].
+10. (no date) Runtime Configuration. Available at: 
+https://www.php.net/manual/en/session.configuration.php [Accessed 20 Nov 2025].
+11. (no date) mysqli_result::$num_rows. Available at: 
+https://www.php.net/manual/en/mysqli-result.num-rows.php [Accessed 20 Nov 2025].
+12. (no date) mysqli_stmt::get_result. Available at: 
+https://www.php.net/manual/en/mysqli-stmt.get-result.php [Accessed 20 Nov 2025].
+13. (no date) mysqli_stmt::execute. Available at: 
+https://www.php.net/manual/en/mysqli-stmt.execute.php [Accessed 20 Nov 2025].
+14. (no date) mysqli_stmt::bind_param. Available at: 
+https://www.php.net/manual/en/mysqli-stmt.bind-param.php [Accessed 20 Nov 2025].
+15. (no date) mysqli::prepare. Available at: 
+https://www.php.net/manual/en/mysqli.prepare.php [Accessed 20 Nov 2025].
+16. (no date) SQL Injection: or 1=1 vs ' or 1=1; -- - [duplicate]. Available at: 
+https://stackoverflow.com/questions/60939830/sql-injection-or-1-1-vs-or-1-1 [Accessed 20 Nov 2025].
+17. (no date) Mutillidae – Sensitive Data Exposure. Available at: 
+https://inventyourshit.com/mutillidae-sensitive-data-exposure [Accessed 20 Nov 2025].
+18. (no date) HTTP Strict Transport Security Cheat Sheet. Available at: 
+https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html [Accessed 20 Nov 2025].
+19. Hamid D. (2020) How to Check for HTTPS Request in PHP? Available at: 
+https://www.designcise.com/web/tutorial/how-to-check-for-https-request-in-php [Accessed 27 Nov 2025].
+20. Everest N. (2020) Setting $_SERVER['HTTPS']='on' prevents access to wp-admin. Available at: 
+https://wordpress.stackexchange.com/questions/250240/setting-serverhttps-on-prevents-access-to-wp-admin  [Accessed 27 Nov 2025].
+21. (2025) How to check whether the page is called from 'https' or 'http' in PHP? Available at: 
+https://www.geeksforgeeks.org/php/how-to-check-whether-the-page-is-called-from-https-or-http-in-php [Accessed 20 Nov 2025].
+22. (2025) Business-Logic Layer. Available at: https://www.geeksforgeeks.org/dbms/business-logic-layer [Accessed 20 Nov 2025].
+23. Chiaramonti M. (2024) The benefits of a three-layered application architecture. Available at: 
+https://vfunction.com/blog/the-benefits-of-a-three-layered-application-architecture [Accessed 27 Nov 2025].
+
 
    
 
