@@ -40,20 +40,19 @@ Important files
 2. add-to-your-blog.php (Fixed CSRF + Stored XSS)
 3. httpd-ssl.conf (Fixed obsolete SSL/TLS algorithms and ciphers)
 4. information-disclosure-comment.php (Fixed HTML/javascript comments)
-5. MySQLHandler.php (fixed database-config.inc)
-6. robots.txt (Fixed sensitive info disclosure)
-7. server.crt (Fixed obsolete SSL/TLS algorithms and ciphers)
-8. server.key (Fixed obsolete SSL/TLS algorithms and ciphers)
-9. upload-file.php (Fixed unrestricted file upload)
+5. robots.txt (Fixed sensitive info disclosure)
+6. server.crt (Fixed obsolete SSL/TLS algorithms and ciphers)
+7. server.key (Fixed obsolete SSL/TLS algorithms and ciphers)
+8. upload-file.php (Fixed unrestricted file upload)
 
 # Setup and Installation Instructions
-1. Download XAMPP and download Mutillidate original code from GitHub
-2. Install XAMPP
+1. Download XAMPP and Mutillidae original code from GitHub
+2. Install XAMPP on machine
 3. Copy Mutillidae folder into XAMPP installation folder
 4. Start Apache and MySQL in XAMPP
 5. Create Mutillidae databse on phpmyadmin http://localhost/phpmyadmin/index.php
 6. Open http://localhost/mutillidae and restart the database to populate the table in Mutillidate database
-7. set security level 0 on mutillidae website to fix vulnerabilities
+7. set security level 0 on mutillidae website to make it vulnerable
 
 # Usage Guidelines
 1. Navigate to login/register on website to login or register the new user.
@@ -66,30 +65,24 @@ Important files
 8. There is a list of vulnerabilities under different tabs in the left pane.
 
 # Security Improvements
-1. Implemented **HTML Output Encoding** in add-to-your-blog.php file to fix CSRF + Stored XSS vulnerability in OWASP 2013 >> CSRF >> Add to your blog
-2. Used Gobuster tools in Kali Linux to brute force files and directories of the website, robots.txt file is exposed and it exposes sensitive directory. To fix, browsed robots.txt and delete all contents inside to prevent sensitive data exposure.
-3. **database-config.inc** is exposed when browsing http://localhost/mutillidae/includes/database-config.inc. It exposes sensitive databse credential. To fix it, moved the config file from root directory **htdocs\mutillidae\includes** to non-root directory outside of **htdocs**.
-4. Used SSLscan tools in Kali Linux against the website, it exposed obsolete **SHA1WithRSAEncryption** in Signature algorithm of SSL certificate and key strength is 1024 which is breakable. To fix it, generated new server cert and key with SHA256 and key size 2048 by using openssl tools in mutillidae folder. Once new key and cert was generated, replace old key and cert file with new ones in **httpd-ssl.conf**.
-5.  Used SSLscan tools in Kali Linux against the website, it exposed 64 bits obsolete ciphers used in **httpd-ssl.conf**. To fix it, replace new ciphers suites **SSLCipherSuite HIGH:!AESCCM8:!AESCCM:!MD5:!RC4:!3DES** and **SSLProxyCipherSuite HIGH:!AESCCM8:!AESCCM:!MD5:!RC4:!3DES**
-6.  For unrestricted file upload on **Othes > Unrestricted file upload > Upload page**, it is supposed to allow image files such as jpeg and png files, but due to vulnerability, it allows any file type where attacker can upload malicious script. To fix it, applied this code to reject file uploading if the wrong file type is uploaded.
-**If (!in_array($lFileType, $lAllowedFileTypes)) {
-	$lValidationMessage .= " File type {$lFileType} is NOT ALLOWED."; //check if the file type is not in allowed list
-	$lFileValid = false; // reject file uploading if wrong file type**
-7. The website was vulnerable because HSTS (HTTP Strict Transport Security) was disabled. It was known through max-age=0 found in browser developer tool. To fix that, apply this code.
-**if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') { // Check if the current connection is on HTTPS.
-	header('Strict-Transport-Security: max-age=31536000; includeSubDomains', true);** // Forces browsers to always use HTTPS for 1 year including subdomains
-    }
-8. For sensitive data exposure vulnerability when browsing on **Sensitive data exposure >> Information disclosure >> HTML/Java script comments** page, it exposed user credential when using **view page source function**. To fix it, deleted the code block of credential in **information-disclosure-comment.php **.
+1. Implemented **HTML Output Encoding** in add-to-your-blog.php file to fix CSRF + Stored XSS vulnerability in http://localhost/mutillidae/index.php?page=add-to-your-blog.php 
+3. Used Gobuster tools in Kali Linux to brute force files and directories of the website, robots.txt file is exposed and it exposes sensitive directory. To fix, browsed robots.txt and delete all contents inside to prevent sensitive data exposure.
+4. **database-config.inc** is exposed when browsing http://localhost/mutillidae/includes/database-config.inc. It exposes sensitive databse credential. To fix it, moved the config file from root directory **htdocs\mutillidae\includes** to non-root directory outside of **htdocs**.
+5. Used SSLscan tools in Kali Linux against the website, it exposed obsolete **SHA1WithRSAEncryption** in Signature algorithm of SSL certificate and key strength is 1024 which is breakable. To fix it, generated new server cert and key with SHA256 and key size 2048 by using openssl tools in mutillidae folder. Once new key and cert was generated, replace old key and cert file with new ones in **httpd-ssl.conf**.
+6.  Used SSLscan tools in Kali Linux against the website, it exposed 64 bits obsolete ciphers used in **httpd-ssl.conf**. To fix it, replace new ciphers suites **SSLCipherSuite HIGH:!AESCCM8:!AESCCM:!MD5:!RC4:!3DES** and **SSLProxyCipherSuite HIGH:!AESCCM8:!AESCCM:!MD5:!RC4:!3DES**
+7.  For unrestricted file upload on http://localhost/mutillidae/index.php?page=upload-file.php, it is supposed to allow image files such as jpeg, gif, and png files, but it allows any file type to be uploaded. To fix it, applied secured code to reject file uploading if the wrong file type is uploaded.
+8. The website was vulnerable because HSTS (HTTP Strict Transport Security) was disabled. It was known through max-age=0 found in browser developer tool. To fix that, enforced HSTS header in code.
+9. For sensitive data exposure vulnerability when browsing on http://localhost/mutillidae/index.php?page=client-side-comments.php page, it exposed database credential when using **view page source function**. To fix it, deleted the code block of credential in **information-disclosure-comment.php **.
 
 # Testing Process
 1. SSLscan - to check SSL/TLS ciphers, versions, and key length
 2. Gobuster - to discover exposed directories and files on website
 3. View page source - to view the website source code
-4. Browser developer tool - to check Strict-Transport-Security status
+4. Browser developer tool - to check HTTP Strict-Transport-Security header
 5. Hack.txt - to check if .txt file is allowed to upload
 
 # Key findings
-1. Obsolete SSL ciphers removed and no more obsolete signature algorithm and RSA key length
+1. Obsolete cipher suites, signature algorithms, and key were deleted.
 2. When browsing to http://localhost/mutillidae/includes/database-config.inc, "The requested URL not found"** is shown to the user.
 3. After implementing **HTML Output Encoding**, When browsing http://localhost/mutillidae/index.php?page=add-to-your-blog.php, user input script is no longer executed as a code. It treated as a character and simply add the input in the table.
 4. When browsing to localhost/mutillidae/robots.txt, it is no longer showing the sensitve data inside the text file.
