@@ -16,6 +16,11 @@ https://github.com/webpwnized/mutillidae
 # Features and Security Objectives
 Major functionalities of application include user login, registration, reading blog and file upload to the website.
 Security objectives include preventing CSRF and stored XSS, protecting sensitive files form exposure, hardening obsolete SSL/TLS ciphers and algorithms, and preventing unauthorized injection file uploading.
+It automatically detects if the MySQL database is available.
+Application can be restored to default state by clicking setup button.
+Testers can switch between secure and vulnerable modes.
+It allows SSL to be enforced to practice HTTPS related vulnerabilities.
+It can be installed on Linux and Windows using XAMMP, making it convenient for those who do not want to setup web server.
 
 # Project structure
 /mutillidae 
