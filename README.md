@@ -14,13 +14,8 @@ https://github.com/webpwnized/mutillidae
 4. Injection (Unrestriced file upload)
 
 # Features and Security Objectives
-Major functionalities of application include user login, registration, reading blog and file upload to the website.
+Major functionalities of application include user login, registration, reading/adding blog and file upload to the website.
 Security objectives include preventing CSRF and stored XSS, protecting sensitive files form exposure, hardening obsolete SSL/TLS ciphers and algorithms, and preventing unauthorized injection file uploading.
-It automatically detects if the MySQL database is available.
-Application can be restored to default state by clicking setup button.
-Testers can switch between secure and vulnerable modes.
-It allows SSL to be enforced to practice HTTPS related vulnerabilities.
-It can be installed on Linux and Windows using XAMMP, making it convenient for those who do not want to setup web server.
 
 # Project structure
 /mutillidae 
@@ -68,6 +63,11 @@ Important files
 6. It has admin level account and user level accounts in database with 500 accounts in total.
 7. There is a reset DB button to reset database conneciton if any issues.
 8. There is a list of vulnerabilities under different tabs in the left pane.
+9. It automatically detects if the MySQL database is available.
+10. Application can be restored to default state by clicking setup button.
+11. Testers can switch between secure and vulnerable modes.
+12. It allows SSL to be enforced to practice HTTPS related vulnerabilities.
+13. It can be installed on Linux and Windows using XAMMP, making it convenient for those who do not want to setup web server.
 
 # Security Improvements
 1. Implemented **HTML Output Encoding** in add-to-your-blog.php file to fix CSRF + Stored XSS vulnerability in http://localhost/mutillidae/index.php?page=add-to-your-blog.php 
