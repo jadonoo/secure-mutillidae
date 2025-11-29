@@ -246,3 +246,29 @@ https://manitechy.medium.com/tep-by-step-guide-to-installing-mutillidae-a-pen-te
 Kartik. (2016) Mutillidae : installation on WAMP or XAMPP. Available at: 
 https://r00tsecurity.wordpress.com/2016/04/23/test-r00t_security-post [Accessed 20 Nov 2025].
 
+(no date) How to find out if you're using HTTPS without $_SERVER['HTTPS']. Available at: 
+https://stackoverflow.com/questions/1175096/how-to-find-out-if-youre-using-https-without-serverhttps 
+[Accessed 20 Nov 2025].
+
+(no date) Statement that checks whether a URL contains a particular path? [duplicate]. Available at: 
+https://stackoverflow.com/questions/52791916/statement-that-checks-whether-a-url-contains-a-particular-path/52792039#52792039  
+[Accessed 20 Nov 2025].
+
+(no date) Check whether form submitted URL has HTTPS or not. Available at: 
+https://stackoverflow.com/questions/44035902/check-whether-form-submitted-url-has-https-or-not 
+[Accessed 20 Nov 2025].
+
+(2021) Fix for some variables($_SERVER['HTTPS'], $_SERVER['SERVER_PORT'],
+ $_SERVER['REQUEST_URI']) for Wordpress based site, which prevents 'Too many redirects' error. Available at: https://github.com/nginx/unit/issues/545 [Accessed 20 Nov 2025].
+
+(no date) How can I force users to access my page over HTTPS instead of HTTP?. Available at: 
+https://stackoverflow.com/questions/85816/how-can-i-force-users-to-access-my-page-over-https-instead-of-http  
+[Accessed 20 Nov 2025].
+
+(no date) Forcing http/https: How to detect https and which status header to send when redirecting?.Available at: 
+https://stackoverflow.com/questions/8902419/forcing-http-https-how-to-detect-https-and-which-status-header-to-send-when-red [Accessed 20 Nov 2025].
+
+(no date) if (isset($this->request->server['HTTPS']) Not working. Available at: 
+https://forum.opencart.com/viewtopic.php?t=46998 [Accessed 20 Nov 2025].
+
+
