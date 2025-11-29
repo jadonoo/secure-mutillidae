@@ -111,8 +111,6 @@ After deleting the database credential on information-disclosure-comment.php, re
 7. After deleting the credential code block in information-disclosure-comment.php, the exposed credential is no longer exposed when using view page source function on browser.
 
 # Contributions and References
-https://github.com/webpwnized/mutillidae
-
 Conklin K, Drake V, Strittmetter S, Braiterman Z, and Shostack A. (no date) Threat Modeling Process. Available at: https://owasp.org/www-community/Threat_Modeling_Process [Accessed 27 Nov 2025].
 
 (no date) Lab 92 – OWASP A6 Security Misconfiguration. Available at: 
