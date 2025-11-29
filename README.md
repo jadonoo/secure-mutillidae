@@ -76,7 +76,7 @@ Important files
 4. **database-config.inc** is exposed when browsing http://localhost/mutillidae/includes/database-config.inc. It exposes sensitive databse credential. To fix it, moved the config file from root directory **htdocs\mutillidae\includes** to non-root directory outside of **htdocs**.
 5. Used SSLscan tools in Kali Linux against the website, it exposed obsolete **SHA1WithRSAEncryption** in Signature algorithm of SSL certificate and key strength is 1024 which is breakable. To fix it, generated new server cert and key with SHA256 and key size 2048 by using openssl tools in mutillidae folder. Once new key and cert was generated, replace old key and cert file with new ones in **httpd-ssl.conf**.
 6.  Used SSLscan tools in Kali Linux against the website, it exposed 64 bits obsolete ciphers used in **httpd-ssl.conf**. To fix it, replace new ciphers suites **SSLCipherSuite HIGH:!AESCCM8:!AESCCM:!MD5:!RC4:!3DES** and **SSLProxyCipherSuite HIGH:!AESCCM8:!AESCCM:!MD5:!RC4:!3DES**
-7.  For unrestricted file upload on http://localhost/mutillidae/index.php?page=upload-file.php, it is supposed to allow image files such as jpeg, gif, and png files, but it allows any file type to be uploaded. To fix it, applied secured code to reject file uploading if the wrong file type is uploaded.
+7.  For unrestricted file upload on http://localhost/mutillidae/index.php?page=upload-file.php, it is supposed to allow image files only, but it allows any file type to be uploaded. To fix it, applied secured code to reject file uploading if the wrong file type is uploaded.
 8. The website was vulnerable because HSTS (HTTP Strict Transport Security) was disabled. It was known through max-age=0 found in browser developer tool. To fix that, enforced HSTS header in code.
 9. For sensitive data exposure vulnerability when browsing on http://localhost/mutillidae/index.php?page=client-side-comments.php page, it exposed database credential when using **view page source function**. To fix it, deleted the code block of credential in **information-disclosure-comment.php **.
 
@@ -86,7 +86,7 @@ Manual functional and Static Application Security Testing (SAST) on three major 
 <script>alert(9)</script> JavaScript was submitted in the comment field of Add to your blog page. The script was simply added and displayed in the table, not executed as script as before. For functional test, submitted normal text in the comment. It was added and displayed on the table. Refer to figure 3.3.1 in appendix.
 
 2. Restricting uploading disallowed file type
-Uploaded disallowed file type hack.txt on http://localhost/mutillidae/index.php?page=upload-file.php page. File type was not allowed response was returned to the user. For functional test, uploaded the allowed file .jpeg, file was successfully uploaded to the xampp\tmp directory. Refer to figure 3.3.6 in appendix.
+Uploaded disallowed file type hack.txt on http://localhost/mutillidae/index.php?page=upload-file.php page. File type was not allowed response was returned to the user. For functional test, uploaded the allowed image file, file was successfully uploaded to the xampp\tmp directory. Refer to figure 3.3.6 in appendix.
 
 3. SSL/TLS hardening
 Used SSLscan to scan the website’s TLS setting, SHA2RSAEncryption with 2048 bits key was displayed. Previously supported 64 bits CCM8 cipher suites were not displayed. New SSL certificate was in use and displayed on the website by viewing certificate details. Refer to figure 3.3.4 in appendix.
@@ -106,7 +106,7 @@ After deleting the database credential on information-disclosure-comment.php, re
 2. When browsing to http://localhost/mutillidae/includes/database-config.inc, "The requested URL not found"** is shown to the user.
 3. After implementing **HTML Output Encoding**, When browsing http://localhost/mutillidae/index.php?page=add-to-your-blog.php, user input script is no longer executed as a code. It treated as a character and simply add the input in the table.
 4. When browsing to localhost/mutillidae/robots.txt, it is no longer showing the sensitve data inside the text file.
-5. After restrcting the file upload, only allowed file type is accepted to upload. Hack.txt is no longer accepted.
+5. After restrcting the file upload, only allowed image file type is accepted to upload. Hack.txt is no longer accepted.
 6. After enabling HSTS, max-age=31536000 is found in browser developer tools when user browse the website on HTTPS.
 7. After deleting the credential code block in information-disclosure-comment.php, the exposed credential is no longer exposed when using view page source function on browser.
 
