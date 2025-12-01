@@ -124,6 +124,10 @@ https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure [Acce
 
 Dizdar A. (2020) The Ultimate Beginners Guide to XSS Vulnerability. Available at: https://brightsec.com/blog/cross-site-scripting-xss [Accessed 20 Nov 2025].
 
+louiepaguilar. (2017) <script>alert(1);</script>. Available at: https://gist.github.com/beatak/1556871 [Accessed 20 Nov 2025].
+
+(no date) Cross-site scripting contexts. Available at: https://portswigger.net/web-security/cross-site-scripting/contexts [Accessed 20 Nov 2025].
+
 Bhattacharya J. (2025) Mutillidae Uncovered: Exploiting XSS for Beginners (Metasploitable 2 Lab). Available at: https://medium.com/@dave-patten/secure-software-development-lifecycle-ssdlc-8ad9273b395b [Accessed 27 Nov 2025].
 
 Patten D. (2024) Secure Software Development Lifecycle (SSDLC). Available at: 
