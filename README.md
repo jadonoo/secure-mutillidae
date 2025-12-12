@@ -271,6 +271,9 @@ https://stackoverflow.com/questions/44035902/check-whether-form-submitted-url-ha
 https://stackoverflow.com/questions/85816/how-can-i-force-users-to-access-my-page-over-https-instead-of-http  
 [Accessed 20 Nov 2025].
 
+(no date) OpenSSL Documentation. Available at: https://docs.openssl.org/1.1.1/man1/ciphers/ 
+[Accessed 20 Nov 2025].
+
 (no date) Forcing http/https: How to detect https and which status header to send when redirecting?.Available at: 
 https://stackoverflow.com/questions/8902419/forcing-http-https-how-to-detect-https-and-which-status-header-to-send-when-red [Accessed 20 Nov 2025].
 
