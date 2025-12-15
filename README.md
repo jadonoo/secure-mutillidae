@@ -61,7 +61,7 @@ Important files
 3. Enforce TLS to enable HTTPS.
 4. Application allows creating, deletion, and updating user accounts.
 5. It has database and web UI.
-6. It has admin level account and user level accounts in database with 500 accounts in total.
+6. It has admin level account and user level accounts in database with 40 accounts in total.
 7. There is a reset DB button to reset database conneciton if any issues.
 8. There is a list of vulnerabilities under different tabs in the left pane.
 9. It automatically detects if the MySQL database is available.
